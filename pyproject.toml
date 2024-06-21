@@ -1,0 +1,72 @@
+[build-system]
+requires=[
+	"setuptools>=61.0",
+	"versioningit",
+]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Hompage" = "https://github.com/ale94mleon/transrot"
+"Issues" = "https://github.com/ale94mleon/tutorial/transrot"
+
+[project]
+name = "transrot"
+dynamic = ["version"]
+description = "A small tutorial."
+readme = "README.rst"
+
+authors=[
+    {name="Alejandro Martínez-León", email="ale94mleon@gmail.com"},
+]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry"
+]
+keywords = [
+    "science",
+    "chemistry",
+    "biology",
+    "drug-design"
+]
+
+requires-python = ">= 3"
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.versioningit]
+default-version = "1+unknown"
+
+[tool.versioningit.format]
+distance = "{base_version}+{distance}.{vcs}{rev}"
+dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+
+[tool.versioningit.vcs]
+method = "git" 
+match = ["*"]
+default-tag = "0.0.0"
+
+[tool.versioningit.write]
+file = "src/transrot/_version.py"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+transrot = [
+    "LICENSE",
+]
