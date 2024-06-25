@@ -44,7 +44,7 @@ How To?
 Issues
 ------
 
-If you have found a bug, please open an issue on the `GitHub Issues <https://github.com/ale94mleon/hello/issues>`_.
+If you have found a bug, please open an issue on the `GitHub Issues <https://github.com/ale94mleon/transrot/issues>`_.
 
 Funding
 ---------

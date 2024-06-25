@@ -12,7 +12,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "transrot"
 dynamic = ["version"]
-description = "A small tutorial."
+description = "Lightweight Python package to calculate translational vector and rotational matrix between two sets of 3D coordinates"
 readme = "README.rst"
 
 authors=[
